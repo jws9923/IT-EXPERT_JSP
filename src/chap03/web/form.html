@@ -1,0 +1,44 @@
+<!-- form.html -->
+<HTML><HEAD><TITLE>폼 데이터 처리 샘플</TITLE></HEAD>
+<BODY>
+<H1> HTML 폼을 통한 JSP 요청</H1><P>
+<FORM METHOD="POST" ACTION="request.jsp">
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="10">
+<TR>
+	
+	<TD COLSPAN="2" WIDTH="320" ALIGN="CENTER"><B>로그인 정보 입력</B></TD>
+</TR>
+<TR>
+	<TD ALIGN="RIGHT">아이디: </TD>
+	<TD ALIGN="LEFT"><INPUT TYPE="TEXT" NAME="ID" ></TD>
+</TR>
+<TR>
+	<TD ALIGN="RIGHT">패스워드: </TD>
+	<TD ALIGN="LEFT"><INPUT TYPE="PASSWORD" NAME="PASSWD" ></TD>
+</TR>
+<TR>
+	<TD COLSPAN="2" WIDTH="320" ALIGN="CENTER">
+		<INPUT TYPE="SUBMIT" VALUE="전송(POST)">
+	</TD>
+</TR>
+</FORM>
+
+<FORM METHOD="GET" ACTION="request.jsp">
+<TR>
+	<TD COLSPAN="2" WIDTH="320" ALIGN="CENTER"><B>이름을 기입하세요</B></TD>
+</TR>
+<TR>
+	<TD  ALIGN="RIGHT">영문 이름:</TD>
+	<TD  ALIGN="LEFT"> <INPUT TYPE="TEXT" NAME="name_en"></TD>
+</TR>
+<TR>
+	<TD ALIGN="RIGHT">한글 이름:</TD>
+	<TD ALIGN="LEFT"><INPUT TYPE="TEXT" NAME="name_ko" ></TD>
+</TR>
+<TR>
+	<TD COLSPAN="2" ALIGN="CENTER"><INPUT TYPE="SUBMIT" VALUE="전송(GET)"></TD>
+</TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

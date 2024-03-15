@@ -1,0 +1,68 @@
+<!-- Tomcat chap09 Context -->
+<Context path="/chap09" docBase="chap09" debug="0" reloadable="true">
+    <Logger className="org.apache.catalina.logger.FileLogger"
+         prefix="localhost_chap09_log." suffix=".txt" timestamp="true"/>
+    <Resource name="jdbc/myORCL" auth="Container"
+        type="javax.sql.DataSource"/>
+
+    <ResourceParams name="jdbc/myORCL">
+        <parameter>
+            <name>factory</name>
+            <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+        </parameter>
+    <!-- Maximum number of dB connections in pool. Make sure you
+         configure your oracle max_connections large enough to handle
+         all of your db connections. Set to 0 for no limit.
+         -->
+        <parameter>
+            <name>maxActive</name>
+            <value>50</value>
+        </parameter>
+    <!-- Maximum number of idle dB connections to retain in pool.
+         Set to 0 for no limit.
+         -->
+        <parameter>
+            <name>maxIdle</name>
+            <value>30</value>
+        </parameter>
+    <!-- Maximum time to wait for a dB connection to become available
+         in ms, in this example 10 seconds. An Exception is thrown if
+         this timeout is exceeded.  Set to -1 to wait indefinitely.
+         -->
+        <parameter>
+            <name>maxWait</name>
+            <value>10000</value>
+        </parameter>
+
+        <parameter>
+          <name>removeAbandoned</name>
+          <value>true</value>
+        </parameter>
+        <parameter>
+          <name>removeAbandonedTimeout</name>
+          <value>60</value>
+        </parameter>
+        <parameter>
+          <name>logAbandoned</name>
+          <value>true</value>
+        </parameter>
+
+        <parameter>
+          <name>username</name>
+          <value>scott</value>
+        </parameter>
+        <parameter>
+          <name>password</name>
+          <value>tiger</value>
+        </parameter>
+        <parameter>
+          <name>driverClassName</name>
+          <value>oracle.jdbc.driver.OracleDriver</value>
+        </parameter>
+        <parameter>
+          <name>url</name>
+          <value>jdbc:oracle:thin:@localhost:1521:ORCL</value>
+        </parameter>
+    </ResourceParams>
+</Context>
+

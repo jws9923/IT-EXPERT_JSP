@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>it</short-name>
+  <description>all Tags</description>
+  <!-- No Cache Tag -->
+  <tag>
+    <name>nocache</name>
+    <tag-class>itexpert.chap08.tag.NoCacheTag</tag-class>
+    <description> no cache allowed </description>
+  </tag>
+
+  <!-- Request Encoding Tag -->
+  <tag>
+    <name>reqEncode</name>
+    <tag-class>itexpert.chap08.tag.RequestEncodingTag</tag-class>
+    <description> set request encode </description>
+  </tag>
+
+  <!-- Parameter Name Tag -->
+  <tag>
+    <name>name</name>
+    <tag-class>itexpert.chap08.tag.ParamNameTag</tag-class>
+    <description> get request parameter name </description>
+  </tag>
+
+  <!-- Log Tag -->
+  <tag>
+    <name>log</name>
+    <tag-class>itexpert.chap08.tag.LogTag</tag-class>
+    <body-content>jsp</body-content>
+    <description> log body </description>
+  </tag>
+
+  <!-- UpperCase Tag -->
+  <tag>
+    <name>upper</name>
+    <tag-class>itexpert.chap08.tag.UpperCaseTag</tag-class>
+    <body-content>jsp</body-content>
+    <description> switch to upper case </description>
+  </tag>
+
+  <!-- Mark search word Tag -->
+  <tag>
+    <name>mark</name>
+    <tag-class>itexpert.chap08.tag.MarkTag</tag-class>
+    <description> mark search word </description>
+    <attribute>
+      <name>word</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+   <!-- Iteration Tag -->
+  <tag>
+    <name>loop</name>
+    <tag-class>itexpert.chap08.tag.IterateTag</tag-class>
+    <body-content>JSP</body-content>
+
+    <variable>
+      <name-given>item</name-given>
+      <variable-class>java.lang.Object</variable-class>
+      <declare>true</declare>
+      <description>Scripting Variable item</description>
+    </variable>
+
+    <variable>
+      <name-given>cnt</name-given>
+      <variable-class>java.lang.Integer</variable-class>
+      <declare>true</declare>
+      <description>count row</description>
+    </variable>
+
+    <attribute>
+      <name>collection</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <!-- If Tag -->
+  <tag>
+    <name>if</name>
+    <tag-class>itexpert.chap08.tag.IfTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>if</description>
+  </tag>
+
+  <!-- Condition Tag -->
+  <tag>
+    <name>condition</name>
+    <tag-class>itexpert.chap08.tag.ConditionTag</tag-class>
+    <body-content>JSP</body-content>
+    <description> check condition </description>
+  </tag>
+
+  <!-- Then Tag -->
+  <tag>
+    <name>then</name>
+    <tag-class>itexpert.chap08.tag.ThenTag</tag-class>
+    <body-content>JSP</body-content>
+    <description> if condition is true then do this </description>
+  </tag>
+
+  <!-- Else Tag -->
+  <tag>
+    <name>else</name>
+    <tag-class>itexpert.chap08.tag.ElseTag</tag-class>
+    <body-content>JSP</body-content>
+    <description> if condition is false then do this </description>
+  </tag>
+
+</taglib>
+

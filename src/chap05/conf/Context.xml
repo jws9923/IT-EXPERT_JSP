@@ -1,0 +1,6 @@
+<!-- Tomcat chap05 Context -->
+<Context path="/chap05" docBase="chap05" debug="0" reloadable="true">
+    <Logger className="org.apache.catalina.logger.FileLogger"
+         prefix="localhost_chap05_log." suffix=".txt" timestamp="true"/>
+</Context>
+

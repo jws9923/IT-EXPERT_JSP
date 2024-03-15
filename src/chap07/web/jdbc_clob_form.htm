@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>clob test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<style>
+.width { width: 90%;}
+</style>
+</head>
+
+<body>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2">CLOB TEST</td>
+  </tr>
+  <form name="form1" method="post" action="jdbc_clob_write.jsp">
+    <tr>
+      <td width="10%">이름</td>
+      <td width="90%"> <input name="name" type="text" class="width"> </td>
+    </tr>
+    <tr>
+      <td>제목</td>
+      <td><input name="subject" type="text" class="width"></td>
+    </tr>
+    <tr>
+      <td>내용</td>
+      <td><textarea name="content" rows="15" class="width"></textarea></td>
+    </tr>
+    <tr align="center">
+      <td colspan="2"><input type="submit" value="전송"></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>
